@@ -2,7 +2,7 @@
 "
 "   QBZ Vim beallitasok
 "
-" frissitve: 2022. 09. 23.
+" frissitve: 2022. 09. 24.
 "
 " ------------------------
 
@@ -64,7 +64,7 @@ nnoremap <C-S-n> :NERDTree<CR>
 " STATUSZSOR
 set laststatus=2
 set statusline=
-set statusline+=%{mode()}\				" aktualis mod kijelzese
+set statusline+=%{mode()}\              " aktualis mod kijelzese
 set statusline+=│
 set statusline+=\ B%n\                  " buffer sorszama
 set statusline+=│
@@ -80,17 +80,17 @@ set statusline+=\ (%3P)                 " Kurzor helye a dokumentumban (szazalek
 " ---------------------
 " PLUG plugin futtatasa
 call plug#begin()
-    Plug 'altercation/vim-colors-solarized'		" szinsema
-    Plug 'morhetz/gruvbox'						" szinsema
-    Plug 'NLKNguyen/papercolor-theme'			" szinsema
-    Plug 'lifepillar/vim-solarized8'			" szinsema
-    Plug 'sheerun/vim-polyglot'					" language pack
-    Plug 'jacquesbh/vim-showmarks'				" plugin: markerek mutatasa
-    Plug 'tpope/vim-surround'					" plugin: hatarolo jelek es tagek editalasa
-    Plug 'vim-airline/vim-airline'				" plugin: statuszsor
-    Plug 'vim-airline/vim-airline-themes'		" plugin: statuszsor szinsemak
-    Plug 'scrooloose/nerdtree'					" plugin: könyvtar tallozo
-    Plug 'tpope/vim-fugitive'					" plugin: GitHub kiegeszito
+    Plug 'altercation/vim-colors-solarized'     " szinsema
+    Plug 'morhetz/gruvbox'                      " szinsema
+    Plug 'NLKNguyen/papercolor-theme'           " szinsema
+    Plug 'lifepillar/vim-solarized8'            " szinsema
+    Plug 'sheerun/vim-polyglot'                 " language pack
+    Plug 'jacquesbh/vim-showmarks'              " plugin: markerek mutatasa
+    Plug 'tpope/vim-surround'                   " plugin: hatarolo jelek es tagek editalasa
+    Plug 'vim-airline/vim-airline'              " plugin: statuszsor
+    Plug 'vim-airline/vim-airline-themes'       " plugin: statuszsor szinsemak
+    Plug 'scrooloose/nerdtree'                  " plugin: könyvtar tallozo
+    Plug 'tpope/vim-fugitive'                   " plugin: GitHub kiegeszito
 call plug#end()
 
 
@@ -102,6 +102,7 @@ if has("gui")
     set guifont=Hack:h9:cEASTEUROPE:qDRAFT
     let g:airline_powerline_fonts = 1       " meno nyilacskas megjelenes az airline statuszbaron
     colorscheme papercolor
+    set lines=35 columns=140
 else
     set t_Co=256
     "colorscheme delek
@@ -136,7 +137,7 @@ autocmd VimEnter * DoShowMarks!
 
 " -------
 " AIRLINE
-" let g:airline#extensions#tabline#enabled = 1	" lapok es bufferek a kepernyo tetejen
+" let g:airline#extensions#tabline#enabled = 1  " lapok es bufferek a kepernyo tetejen
 
 
 
@@ -155,21 +156,22 @@ autocmd VimEnter * DoShowMarks!
 " ---------------------
 "
 "
-" modositas 2021. 10. 31.: Kite modositasok:
-" 			   - set statusline elso verzioja
-" 			   - Kite tamogatott nyelvek: *
-" 			   - Status Line hozzaadasa
-" modositas 2021. 10. 16.: 'set ignorecase' hozaadva
-" modositas 2021. 03. 05.: ha GUI fut, akkor mas a colorscheme
-" modositas 2022. 07. 06.: Automatikus behuzas es NERDTree
+" 2021.10.31.: Kite modositasok:
+"              - set statusline elso verzioja
+"              - Kite tamogatott nyelvek: *
+"              - Status Line hozzaadasa
+" 2021.10.16.: 'set ignorecase' hozaadva
+" 2021.03.05.: ha GUI fut, akkor mas a colorscheme
+" 2022.07.06.: Automatikus behuzas es NERDTree
 "              - Az automatikus behuzas beallitasai pontositva
 "              - A NERDTree automatikusan indul a VIM indulasakor
-" modositas 2022. 07. 20.: Statuszsor es új szinsema
+" 2022.07.20.: Statuszsor es új szinsema
 "              - Az Airline statuszsor telepitese
 "              - A Papercolor szinsema telepitese
 "              - Az aktualis sor kijemelese
-" modositas 2022. 07. 30.: Sormozgató billentyűparancsok
-" modositas 2022. 08. 09.: Fajltipusfuggo beallitasok:
+" 2022.07.30.: Sormozgató billentyűparancsok
+" 2022.08.09.: Fajltipusfuggo beallitasok:
 "              - C++: autowrite, makeprg, <F5>
-" modositas 2022. 09. 11.: NERDTree inditasa billentyuparanccsal
-" modositas 2022. 09. 23.: A 'set autochdir' hozzaadasa
+" 2022.09.11.: NERDTree inditasa billentyuparanccsal
+" 2022.09.23.: A 'set autochdir' hozzaadasa
+" 2022.09.24.: gVim ablak indulasi merete (:set lines...)
