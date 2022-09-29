@@ -37,6 +37,7 @@ set incsearch
 set cursorline
 
 set wrap
+set linebreak
 set nocompatible
 set autochdir
 
@@ -57,6 +58,10 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 
 " NERDTree indítása
 nnoremap <C-S-n> :NERDTree<CR>
+
+" nyilbillentyuk mukodese
+nnoremap <Up> gk
+nnoremap <Down> jg
 
 
 
@@ -175,3 +180,5 @@ autocmd VimEnter * DoShowMarks!
 " 2022.09.11.: NERDTree inditasa billentyuparanccsal
 " 2022.09.23.: A 'set autochdir' hozzaadasa
 " 2022.09.24.: gVim ablak indulasi merete (:set lines...)
+" 2022.09.28.: Nyilbillentyuk mukodesenek definialasa (gk, gj)
+"              - linebreak bekapcsolása
