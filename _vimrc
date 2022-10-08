@@ -61,7 +61,7 @@ nnoremap <C-S-n> :NERDTree<CR>
 
 " nyilbillentyuk mukodese
 nnoremap <Up> gk
-nnoremap <Down> jg
+nnoremap <Down> gj
 
 
 
@@ -110,7 +110,6 @@ if has("gui")
     set lines=35 columns=140
 else
     set t_Co=256
-    "colorscheme delek
     colorscheme papercolor
 endif
 
