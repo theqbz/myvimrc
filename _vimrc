@@ -2,7 +2,9 @@
 "
 "   QBZ Vim beállítások
 "
-" frissítve: 2022. 09. 24.
+"       [ Windows ]
+"
+" frissítve: 2022. 11. 02.
 "
 " ------------------------
 
