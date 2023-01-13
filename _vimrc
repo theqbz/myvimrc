@@ -101,6 +101,7 @@ call plug#begin()
     Plug 'vim-airline/vim-airline-themes'       " plugin: státuszsor színsémák
     Plug 'scrooloose/nerdtree'                  " plugin: könyvtár tallózó
     Plug 'tpope/vim-fugitive'                   " plugin: GitHub kiegészítő
+    Plug 'kien/rainbow_parentheses.vim'
 call plug#end()
 
 
