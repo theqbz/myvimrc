@@ -4,7 +4,7 @@
 "
 "       [ Windows ]
 "
-" frissítve: 2022. 11. 02.
+" frissítve: 2023. 04. 20.
 "
 " ------------------------
 
@@ -133,6 +133,7 @@ endif
 autocmd FileType cpp set autowrite
 autocmd FileType cpp set makeprg=g++\ -o\ %:p:r\ %\ -Wall   " az aktuális fájl fordítása ugyanolyan nevű exe-re
 autocmd FileType cpp noremap <F5> :make<CR> :copen<CR>
+autocmd FileType cpp inoremap <F5> <ESC>:make<CR> :copen<CR>
 
 
 
@@ -209,3 +210,4 @@ let g:airline_inactive_alt_sep = 1              " másféle státussor az inakt�
 " 2022.09.24.: gVim ablak indulási mérete (:set lines...)
 " 2022.09.28.: Nyílbillentyűk működésének definiálása (gk, gj)
 "              - linebreak bekapcsolása
+" 2023.05.20.: Az <F5> billentyű insert módban is működjön.
