@@ -102,6 +102,7 @@ call plug#begin()
     Plug 'scrooloose/nerdtree'                  " plugin: könyvtár tallózó
     Plug 'tpope/vim-fugitive'                   " plugin: GitHub kiegészítő
     Plug 'kien/rainbow_parentheses.vim'
+    Plug 'ycm-core/YouCompleteMe'
 call plug#end()
 
 
@@ -131,7 +132,7 @@ endif
 " FÁJLTÍPUSTÓL FÜGGŐ BEÁLLÍTÁSOK
 " C++
 autocmd FileType cpp set autowrite
-autocmd FileType cpp set makeprg=g++\ -o\ %:p:r\ %\ -Wall   " az aktuális fájl fordítása ugyanolyan nevű exe-re
+autocmd FileType cpp set makeprg=g++\ -o\ %:p:r\ %\ -std=c++20\ -Wall   " az aktuális fájl fordítása ugyanolyan nevű exe-re
 autocmd FileType cpp noremap <F5> :make<CR> :copen<CR>
 
 
