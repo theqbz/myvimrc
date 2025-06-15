@@ -4,7 +4,7 @@
 "
 "       [ Windows ]
 "
-" frissítve: 2023. 11. 30.
+" frissítve: 2025. 06. 15.
 "
 " -----------------------------------------------------------------------------
 
@@ -137,7 +137,6 @@ call plug#begin()
     Plug 'altercation/vim-colors-solarized' " színséma
     Plug 'NLKNguyen/papercolor-theme'       " színséma
     Plug 'hzchirs/vim-material'             " színséma
-    Plug 'mg979/vim-studio-dark'            " színséma
 call plug#end()
 
 
@@ -180,11 +179,12 @@ let g:gruvbox_contrast_light='hard'
 autocmd FileType cpp set autowrite
 "
 " fordítás a build.bat scripttel:
-autocmd FileType cpp set makeprg=d:\repos\csvvalidator\src\build.bat
+" autocmd FileType cpp set makeprg=d:\devel\build.bat
 "
 " az aktuális fájl fordítása gcc-vel egy ugyanolyan nevű exe-re
 " (egyfájlos projekt esetén):
-" autocmd FileType cpp set makeprg=g++\ -std=c++20\ -o\ %:p:r\ %\ -Wall      
+" autocmd FileType cpp set makeprg=g++\ -std=c++20\ -o\ %:p:r\ %\      
+ autocmd FileType cpp set makeprg=g++\ -std=c++20\ -o\ %:p:r\ %\ 
 "
 " Build (and run) funkció az <F5> billentyűre:
 autocmd FileType cpp noremap <F5> :make<CR> :copen<CR>
@@ -282,5 +282,6 @@ let g:airline_inactive_alt_sep = 1              " másféle státussor az inakt�
 " 2023.11.25.: Buffer bezárása az <F12> billentyűvel, fájl tördelése és
 "              kommentek javítása
 " 2023.11.30.: PowerShell script language pack, 'pprovost/vim-ps1' hozzáadása
-"
+" 2025.06.15.: Nem működő sznísémák eltávolítása
+" 
 " -----------------------------------------------------------------------------
